@@ -1,0 +1,8 @@
+##
+## This is just a simple compose file, for demo purposes.
+##
+
+web:
+  build: ./containers/web
+  ports:
+    - "0.0.0.0:3000:8080"
