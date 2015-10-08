@@ -3,6 +3,8 @@
 A simple seed for getting up and running with vagrant provisioned with `docker`
 and `docker-compose`.
 
+Checkout the other branches for spesific seeds.
+
 :whale:
 
 #### Dependencies
