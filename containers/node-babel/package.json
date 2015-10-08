@@ -3,25 +3,20 @@
   "version": "1.0.0",
   "description": "node babel seed",
   "main": "./src/app.js",
+  "author": "j@myrland.nu",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "babel-node": "babel-node --stage 0"
   },
   "dependencies": {
-    "babel-runtime": "^5.8.25",
-    "express": "^4.13.3",
+    "babel": "^5.8.23",
     "forever-monitor": "^1.7.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.1",
-    "gulp-concat": "^2.6.0",
     "gulp-nodemon": "^2.0.4",
     "gulp-sequence": "^0.4.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-util": "^3.0.6"
+    "gulp-util": "^3.0.6",
+    "source-map-support": "^0.3.2"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.3",
