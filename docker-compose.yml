@@ -9,4 +9,4 @@ web:
   environment:
     - NODE_ENV=development
   volumes:
-    - ./containers/node-babel/dist:/app/dist
+    - ./containers/node-babel/src:/app/src
