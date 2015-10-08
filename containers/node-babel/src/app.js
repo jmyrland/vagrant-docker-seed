@@ -1,19 +1,15 @@
-// import http from 'http';
-import useless from './useless.js';
-
+import useless from './lib/useless.js';
 import express from 'express';
-import { Server } from 'http';
 
-const server = express();
-const http = new Server(server);
+const app = express();
 
-server.set('port', (process.env.PORT || 8080));
+app.set('port', (process.env.PORT || 8080));
 
 //
 // Register server-side rendering middleware
 // -----------------------------------------------------------------------------
 
-server.get('*', async (req, res) => {
+app.get('*', async (req, res) => {
   console.log('Incoming request: ', req.url);
 
   try {
@@ -30,15 +26,4 @@ server.get('*', async (req, res) => {
   }
 });
 
-//
-// Launch the server
-// -----------------------------------------------------------------------------
-
-http.listen(server.get('port'), () => {
-  if (process.send) {
-    process.send('online');
-  }
-  else {
-    console.log('The server is running at http://localhost:' + server.get('port'));
-  }
-});
+export default app;

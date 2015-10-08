@@ -6,7 +6,7 @@ var sequence = require('gulp-sequence');
 
 var SRC_PATH = 'src';
 var RUN_COMMAND = 'npm run babel-node --';
-var ENTRY_POINT = SRC_PATH + '/app.js';
+var ENTRY_POINT = SRC_PATH + '/server.js';
 
 gulp.task('dev', function () {
   return nodemon({

@@ -6,11 +6,11 @@ export default {
 
       if (url === '/') {
         const message = util.format('Hello, %s!', name);
-        resolve(message);
+        return resolve(message);
       }
 
       // Unknown url
-      throw Error('Unknown url.');
+      throw Error('Wooops! Unknown url. Nothing to see here..');
     });
   },
 };
