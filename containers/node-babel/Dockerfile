@@ -1,4 +1,4 @@
-FROM node:0.12.2
+FROM node:4.1.2
 
 # Provides cached layer for node_modules
 COPY ./package.json /tmp/package.json
