@@ -1,8 +1,5 @@
 FROM node:0.12.2
 
-# Install gulp globally
-CMD npm install -g gulp
-
 # Provides cached layer for node_modules
 COPY ./package.json /tmp/package.json
 RUN cd /tmp && npm install --production
