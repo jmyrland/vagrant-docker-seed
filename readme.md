@@ -5,7 +5,8 @@ and `docker-compose`.
 
 :whale:
 
-Inspired by [node-seed](https://github.com/hwndept/node-seed).
+Inspired by [node-seed](https://github.com/hwndept/node-seed) and
+[docker-node-babel-js](https://github.com/mattlo/docker-node-babel-js).
 
 **Contains:**
 - babel (ES6 transpiling)
@@ -13,6 +14,23 @@ Inspired by [node-seed](https://github.com/hwndept/node-seed).
 - ESlinting (requires devDependencies)
 - nodemon (if NODE_ENV is set to `development`)
 - forever (if NODE_ENV is set to `production`)
+
+**Environment overview**
+```
++--------------------------+
+| Vagrant                  |-> Maps port 3000 -> 3000 to host
+| +----------------------+ |
+| | Docker host          |-|-> Maps port 8080 -> 3000 to vagrant
+| | +------------------+ | |
+| | | Docker container |-|-|-> Exposes port 8080
+| | | [node-babel]-----|-|-|-> Running web app on port 8080
+| | +------------------+ | |
+| +----------------------+ |
++--------------------------+
+```
+
+The port mappings is fully configurable, by modifying the `Vagrantfile` and
+`docker-compose.yml` files.
 
 #### Dependencies
 - [Vagrant](https://www.vagrantup.com/)
